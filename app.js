@@ -99,7 +99,7 @@ import dotenv from 'dotenv'
 import userModel from './models/userModel.js'
 import userRouter from './routers/userRouter.js'
 import vendorRouter from './routers/vendorRouter.js'
-import cors from "cors"
+// import cors from "cors"
 
 
 const app = express()
@@ -107,12 +107,12 @@ dotenv.config()
 app.use(express.json())
 
 
-app.use(cors({
-    origin: process.env.CLIENT_DOMAIN,
-    methods: 'GET, PUT, DELETE, POST',
-    credentials: true,
-    headers: ['Content-Type, Authorization']
-}))
+// app.use(cors({
+//     origin: process.env.CLIENT_DOMAIN,
+//     methods: 'GET, PUT, DELETE, POST',
+//     credentials: true,
+//     headers: ['Content-Type, Authorization']
+// }))
 
 
 app.use(userRouter)
