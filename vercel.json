@@ -1,16 +1,16 @@
-{
-    "version":2,
-    "rewrites":[
-
-        {
-
-            "source": "/(.*)",
-            "destination": ""
+{ 
+    "version": 2,
+    "name": "foodapi",
+    "routes": [
+        { 
+            "src": "/(.*)",
+            "dest": "/app.js"
         }
-
-
-    ]
-
-
-
+    ],
+    "builds": [
+        { 
+            "src": "/app.js",
+            "use": "@vercel/node"
+        }
+    ] 
 }
