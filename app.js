@@ -121,9 +121,9 @@ app.use(vendorRouter)
 
 
 // CREATE OPERATIONS
-app.post('/user', async (req, res)=>{
+// app.post('/user', async (req, res)=>{
    
-})
+// })
 
 // app.post('/vendor', async (req, res)=>{
 //     try{
@@ -177,7 +177,7 @@ app.put('/users/:id', async(req,res)=>{
 })
 
 
-const port = process.env.port
+const port = process.env.PORT || 5000
 
 mongoose.connect(process.env.MONGO_URI)
 .then (()=>{
